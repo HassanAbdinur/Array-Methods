@@ -47,7 +47,7 @@ const inventors = [
   console.log(totalYears);
 
   // 5. Sort the inventors by years lived
-  const oldest = inventors.sort(function(a, b){
+  const oldest = inventors.sort((a, b) => {
       const lastGuy = a.passed - a.year;
       const nextGuy = b.passed - b.year;
       return lastGuy > nextGuy ? -1 : 1;
@@ -75,7 +75,7 @@ const inventors = [
   // Sum up the instances of each of these
   const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-  const transportation = data.reduce(function(obj, item){
+  const transportation = data.reduce((obj, item) => {
         if (!obj[item]) {
             obj[item]=0;
         }
